@@ -1,0 +1,5 @@
+{
+  "home.zip": "verifyAddress-zip",
+  "home.checkAvailability": "#verifyAddress-button",
+  "homePop.txtShopping": "//a[@class = 'button button--primary']"
+}
