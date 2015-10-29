@@ -9,9 +9,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-/**
- * Created by shiba_000 on 10/26/2015.
- */
+
 public class HomePageTest extends BaseWebTest {
 
     private HomePage _hp;

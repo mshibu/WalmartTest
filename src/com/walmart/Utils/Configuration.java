@@ -6,9 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by shiba_000 on 10/17/2015.
- */
 public class Configuration {
 
     public Browsers Browser;

@@ -12,9 +12,7 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by shiba_000 on 10/27/2015.
- */
+
 public class ExcelUtils {
 
     private Logger _logger;

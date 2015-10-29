@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.Set;
 
-/**
- * Created by shiba_000 on 10/23/2015.
- */
+
 public class HomePage extends PortalPage {
 
     public HomePage(PageDriver driver){
@@ -25,13 +23,13 @@ public class HomePage extends PortalPage {
             zipBox.clear();
             zipBox.sendKeys(zip);
             driver.findElement("home.checkAvailability").click();
+            Thread.sleep(3000);
 
-            Set<String> handles = driver.getAllWindowHandles();
-            driver.switchWindow(handles);
-
-            txtValue = driver.findElement("xpath=homePop.txtShopping").getText();
-           if(txtValue == "Start Shopping")
+            txtPresent = driver.findElement("xpath=homePop.txtShopping").isDisplayed();
+           /* txtValue = driver.findElement("xpath=homePop.txtShopping").getText();
+           if(txtValue.equals("Start Shopping")) {
                txtPresent = true;
+           }*/
         }
         catch(Exception e){
             _logger.error(e);

@@ -14,10 +14,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
-
-/**
- * Created by shiba_000 on 10/17/2015.
- */
 public class PageDriver {
 
     public final Configuration _configuration;
@@ -53,13 +49,13 @@ public class PageDriver {
         return _mainWindowHandler;
     }
 
-    public Set<String> getAllWindowHandles() {return _windowHandles; }
+   /* public Set<String> getAllWindowHandles() {return _webDriver.getWindowHandles(); }
 
     public void switchWindow(Set<String> handles){
         for(String handle : handles){
             _webDriver.switchTo().window(handle);
         }
-    }
+    }*/
 
     private void start(){
         try{
@@ -86,7 +82,6 @@ public class PageDriver {
                 _webDriver.manage().deleteAllCookies();
             }
             _mainWindowHandler = _webDriver.getWindowHandle();
-            _windowHandles = _webDriver.getWindowHandles();
         }
 
         catch (Exception e){
