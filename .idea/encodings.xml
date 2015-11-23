@@ -2,5 +2,15 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/build/rest/childSuite1.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/build/rest/childSuite2.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/build/rest/rest-testng.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/rest-data.xlsx" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/walmart/Base/BaseApiTest.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/walmart/Base/BaseRestTest.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/walmart/Tests/Main.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/walmart/Utils/rest/Headers.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/walmart/Utils/rest/JSONWrapper.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/com/walmart/Utils/rest/RESTUtil.java" charset="windows-1252" />
   </component>
 </project>

@@ -1,6 +1,7 @@
-package com.walmart.Tests;
+package com.walmart.Tests.ui;
 
 import com.walmart.Base.BaseWebTest;
+import com.walmart.Pages.GroceryPage;
 import com.walmart.Pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -25,9 +26,17 @@ public class HomePageTest extends BaseWebTest {
         return data;
     }
 
-    @Test(dataProvider = "zip-data")
+    @Test(priority = 2, dataProvider = "zip-data")
     public void testZipAvailability(String zip){
         boolean txtAvailable = _hp.performZipAvailability(zip);
         Assert.assertTrue(txtAvailable);
     }
+
+    @Test (priority = 1)
+    public void testSignInLinkPresent(){
+        boolean linkDisplay = _hp.signInLink();
+        Assert.assertTrue(linkDisplay);
+    }
+
 }
+

@@ -1,4 +1,4 @@
-package com.walmart.Utils;
+package com.walmart.Utils.web;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

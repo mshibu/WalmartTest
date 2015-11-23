@@ -1,5 +1,6 @@
 package com.walmart.Utils;
 
+import com.walmart.Utils.web.Browsers;
 import org.apache.log4j.Logger;
 
 import java.io.FileReader;
@@ -18,13 +19,20 @@ public class Configuration {
     private Logger _logger;
     public String FilePath;
 
-    public Configuration() {
+    public Configuration(boolean isWebTest) {
         try {
             _logger = Logger.getLogger(Configuration.class);
 
-            Properties props = loadProperties();
-           // setCommonProps(props);
-            setWebProps(props);
+            Properties props = loadProperties(isWebTest);
+            setCommonProps(props);
+            if(isWebTest)
+            {
+                setWebProps(props);
+            }
+            else
+            {
+                setRestProps(props);
+            }
 
         } catch (Exception ex) {
             _logger.error(ex);
@@ -32,13 +40,16 @@ public class Configuration {
 
     }
 
-    private Properties loadProperties()
+    private Properties loadProperties(boolean isWebTest)
     {
         Properties props = new Properties();
         try {
-            props.load(new FileReader(String.format("%s/config.properties", System.getProperty("user.dir"))));
-        }
-        catch (IOException e) {
+            if (isWebTest) {
+                props.load(new FileReader(String.format("%s/config.properties", System.getProperty("user.dir"))));
+            } else {
+                props.load(new FileReader(String.format("%s/restConfig.properties", System.getProperty("user.dir"))));
+            }
+        } catch (IOException e) {
             _logger.error(e);
         }
 
@@ -46,11 +57,11 @@ public class Configuration {
     }
 
 
-   /* public void setCommonProps(Properties mProps) {
+    public void setCommonProps(Properties mProps) {
         WaitTimeout = Integer.parseInt(mProps.getProperty("wait-timeout"));
         FilePath = mProps.getProperty("file-path");
 
-    }*/
+    }
     public void setWebProps(Properties mProps)
     {
         WaitTimeout = Integer.parseInt(mProps.getProperty("wait-timeout"));
@@ -80,5 +91,10 @@ public class Configuration {
         TestResultPath = mProps.getProperty("test-result-path");
         TestDataPath = mProps.getProperty("test-data-path");
         System.out.println("Configuration");
+    }
+
+    public void setRestProps(Properties mProps)
+    {
+        BaseURI = mProps.getProperty("uri");
     }
 }

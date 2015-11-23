@@ -1,6 +1,6 @@
 package com.walmart.Base;
 
-import com.walmart.Utils.PageDriver;
+import com.walmart.Utils.web.PageDriver;
 import org.apache.log4j.Logger;
 
 

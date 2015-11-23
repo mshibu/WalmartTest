@@ -1,5 +1,10 @@
 {
   "home.zip": "verifyAddress-zip",
   "home.checkAvailability": "#verifyAddress-button",
-  "homePop.txtShopping": "//a[@class = 'button button--primary']"
+  "homePop.txtShopping": "//a[@class = 'button button--primary']",
+  "home.SignIn": "p > a[href = '/usd-estore/m/register/signin-only.jsp']",
+  "signIn.email": "#emailAddress",
+  "signIn.password": "#password",
+  "signIn.signInBtn":"//button[@class='button button--block']",
+  "grocery.slider.items": "ol.carousel-pagination li"
 }

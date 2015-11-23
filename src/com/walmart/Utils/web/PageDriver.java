@@ -1,7 +1,7 @@
-package com.walmart.Utils;
+package com.walmart.Utils.web;
 
+import com.walmart.Utils.Configuration;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +10,6 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 
@@ -127,17 +126,22 @@ public class PageDriver {
     public Collection<WebElement> findElements(String locator) {
         Collection<WebElement> elements = null;
         try {
-            Collection<WebElement> webElements = _webDriver.findElements(WBy.get(locator));
-            if (webElements.size() > 0) {
-                elements = new ArrayList<WebElement>();
+                elements = _webDriver.findElements(WBy.get(locator));
+           /* if (webElements.size() > 0) {
+                elements = new ArrayList<WebElement>();*/
+                return elements;
             }
-            return elements;
-        }
 
         catch (Exception ex) {
             _logger.error(ex);
             return null;
         }
+    }
+
+    public String getCookie(String cookieName)
+    {
+        String value = null;
+        return _webDriver.manage().getCookieNamed(cookieName).getValue();
     }
 
     public void quit() {

@@ -1,4 +1,4 @@
-package com.walmart.Utils;
+package com.walmart.Utils.web;
 
 
 public enum Browsers {

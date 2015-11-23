@@ -9,7 +9,7 @@ public abstract class BaseTest {
     public static final Configuration _config;
 
     static {
-        _config = new Configuration();
+        _config = new Configuration(true);
     }
 
     //Rally connection

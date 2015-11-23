@@ -1,0 +1,11 @@
+<suite name="ChildSuite1" verbose="1">
+
+    <test name="GeocodingTest">
+        <parameter name="uri" value="https://maps.googleapis.com/maps/api/geocode/"></parameter>
+        <classes>
+            <class name="com.walmart.Tests.api.GoogleGeocodingTest"/>
+        </classes>
+    </test>
+
+</suite>
+

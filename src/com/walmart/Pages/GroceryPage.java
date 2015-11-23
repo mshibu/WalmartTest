@@ -1,10 +1,7 @@
 package com.walmart.Pages;
 
-import com.walmart.Utils.PageDriver;
+import com.walmart.Utils.web.PageDriver;
 
-/**
- * Created by shiba_000 on 10/24/2015.
- */
 public class GroceryPage extends PortalPage {
 
     public GroceryPage(PageDriver driver){
@@ -12,15 +9,12 @@ public class GroceryPage extends PortalPage {
         _logger.debug("Open Grocery Page");
     }
 
-   /* public int getSliderItemsCount(){
+   public int getSliderItemsCount(){
 
+        return driver.findElements("grocery.slider.items").size();
     }
 
-    public boolean presenceOfTrendingInArea(){
-
-    }
-
-    public boolean presenceOfFeaturedCategories(){
+   /* public boolean presenceOfFeaturedCategories(){
 
     }*/
 }

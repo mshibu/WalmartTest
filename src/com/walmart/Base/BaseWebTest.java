@@ -1,8 +1,8 @@
 package com.walmart.Base;
 
 import com.walmart.Utils.ExcelUtils;
-import com.walmart.Utils.PageDriver;
-import com.walmart.Utils.WBy;
+import com.walmart.Utils.web.PageDriver;
+import com.walmart.Utils.web.WBy;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
